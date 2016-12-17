@@ -78,7 +78,7 @@ for i = 1:CC.compNum
     
     S=intersectionSecond;
     
-    mask = zeros(512,512);
+    mask = zeros(sizem);
     mask(S) =1;
     
     CCmask = connComp(mask);
@@ -86,7 +86,7 @@ for i = 1:CC.compNum
 end
 soma=result;
 
-mask= zeros(512,512);
+mask= zeros(sizem);
 
 for i=1:CC.compNum mask(soma{i})=1; end
 mask(find(detectedSoma))=1;
